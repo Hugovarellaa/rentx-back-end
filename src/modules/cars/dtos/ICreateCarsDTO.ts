@@ -10,6 +10,8 @@ interface ICreateCarsDTO {
 	category_id: string;
 
 	specifications?: Specification[];
+
+	id?: string;
 }
 
 export { ICreateCarsDTO };
