@@ -23,6 +23,13 @@ class CreateCarSpecificationsUseCase {
 		}
 
 		const specifications = await this.specificationsRepository.findByIds(specification_id);
+
+		carExists.specifications = specifications;
+
+		const car = await this.carsRepository.create(carExists);
+
+		console.log('specifications:', specifications);
+		console.log(car);
 	}
 }
 
