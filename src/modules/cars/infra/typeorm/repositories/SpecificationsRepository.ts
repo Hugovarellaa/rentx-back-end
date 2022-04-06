@@ -24,6 +24,10 @@ class SpecificationsRepository implements ISpecificationsRepository {
 	async findByName(name: string): Promise<Specification> {
 		return this.repository.findOne({ name });
 	}
+
+	async findByIds(ids: string[]): Promise<Specification[]> {
+		return this.repository.findByIds(ids);
+	}
 }
 
 export { SpecificationsRepository };
