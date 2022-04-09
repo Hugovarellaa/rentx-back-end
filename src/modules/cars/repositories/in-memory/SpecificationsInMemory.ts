@@ -18,8 +18,8 @@ class SpecificationsInMemory implements ISpecificationsRepository {
 	async findByName(name: string): Promise<Specification> {
 		return this.specifications.find((spec) => spec.name === name);
 	}
-	findByIds(ids: string[]): Promise<Specification[]> {
-		throw new Error('Method not implemented.');
+	async findByIds(ids: string[]): Promise<Specification[]> {
+		return this.specifications.filter((specification) => ids.includes(specification.id));
 	}
 }
 
