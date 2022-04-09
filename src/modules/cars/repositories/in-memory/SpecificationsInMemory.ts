@@ -6,8 +6,11 @@ import { ISpecificationsRepository } from '../ISpecificationsRepository';
 class SpecificationsInMemory implements ISpecificationsRepository {
 	specifications: Specification[] = [];
 
-	create({ name, description }: ICreateSpecificationsDTO): Promise<void> {
-		throw new Error('Method not implemented.');
+	async create({ name, description }: ICreateSpecificationsDTO): Promise<void> {
+		const specification = new Specification();
+
+		Object.assign(specification, { name, description });
+		this.specifications.push(specification);
 	}
 	async getAll(): Promise<Specification[]> {
 		return this.specifications;
