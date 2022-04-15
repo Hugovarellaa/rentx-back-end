@@ -18,8 +18,6 @@ class CreateCarSpecificationsUseCase {
 		if (!carExists) {
 			throw new AppError(`Car not found!`);
 		}
-
-		carExists.specifications = specification_id;
 	}
 }
 
