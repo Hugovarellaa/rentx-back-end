@@ -12,8 +12,8 @@ class SpecificationsInMemory implements ISpecificationsRepository {
 	async getAll(): Promise<Specification[]> {
 		return this.specifications;
 	}
-	findByName(name: string): Promise<Specification> {
-		throw new Error('Method not implemented.');
+	async findByName(name: string): Promise<Specification> {
+		return this.specifications.find((spec) => spec.name === name);
 	}
 	findByIds(ids: string[]): Promise<Specification[]> {
 		throw new Error('Method not implemented.');
