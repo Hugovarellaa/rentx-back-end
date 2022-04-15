@@ -4,11 +4,13 @@ import { Specification } from '@modules/cars/infra/typeorm/entities/Specificatio
 import { ISpecificationsRepository } from '../ISpecificationsRepository';
 
 class SpecificationsInMemory implements ISpecificationsRepository {
+	specifications: Specification[] = [];
+
 	create({ name, description }: ICreateSpecificationsDTO): Promise<void> {
 		throw new Error('Method not implemented.');
 	}
-	getAll(): Promise<Specification[]> {
-		throw new Error('Method not implemented.');
+	async getAll(): Promise<Specification[]> {
+		return this.specifications;
 	}
 	findByName(name: string): Promise<Specification> {
 		throw new Error('Method not implemented.');
