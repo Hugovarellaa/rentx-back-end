@@ -13,10 +13,19 @@ describe('Create Car specification ', () => {
 	});
 
 	it('should be able to add a new specification to the car', async () => {
-		const car_id = '123';
-		const specification_id = ['323121'];
+		const car = await carsRepositoryInMemory.create({
+			name: 'Car Test',
+			description: 'Description Test',
+			daily_rate: 12600,
+			license_plate: 'DFE-33963258',
+			fine_amount: 520,
+			brand: 'Brand Test',
+			category_id: 'Category Test',
+		});
 
-		await createCarSpecificationsUseCase.execute({ car_id, specification_id });
+		const specification_id = ['3131'];
+
+		await createCarSpecificationsUseCase.execute({ car_id: car.id, specification_id });
 	});
 
 	it('should not be able to add a new specification to a non-exists car', async () => {
