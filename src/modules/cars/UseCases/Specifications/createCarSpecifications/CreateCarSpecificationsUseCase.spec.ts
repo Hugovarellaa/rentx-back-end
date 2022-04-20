@@ -11,5 +11,10 @@ describe('Create Car specification ', () => {
 		createCarSpecificationsUseCase = new CreateCarSpecificationsUseCase(carsRepositoryInMemory);
 	});
 
-	it('should be able to add a new specification to the car', () => {});
+	it('should be able to add a new specification to the car', async () => {
+		const car_id = '123';
+		const specification_id = ['323121'];
+
+		await createCarSpecificationsUseCase.execute({ car_id, specification_id });
+	});
 });
