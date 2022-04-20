@@ -1,3 +1,5 @@
-class CreateCarSpecificationsUseCase {}
+class CreateCarSpecificationsUseCase {
+	async execute() {}
+}
 
 export { CreateCarSpecificationsUseCase };
