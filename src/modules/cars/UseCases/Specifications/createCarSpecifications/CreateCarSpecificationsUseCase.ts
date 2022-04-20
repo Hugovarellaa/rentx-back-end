@@ -1,0 +1,3 @@
+class CreateCarSpecificationsUseCase {}
+
+export { CreateCarSpecificationsUseCase };
