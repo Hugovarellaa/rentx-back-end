@@ -12,8 +12,18 @@ describe('List Cars', () => {
 	});
 
 	it('should be able to list all available cars', async () => {
+		const car = await carsRepositoryInMemory.create({
+			name: 'Car1',
+			description: 'Car Description',
+			daily_rate: 1600,
+			license_plate: 'DF-1234',
+			fine_amount: 520,
+			brand: 'Car_Brand',
+			category_id: 'category_id',
+		});
+
 		const cars = await listCarsUseCase.execute();
 
-		console.log(cars);
+		expect(cars).toEqual([car]);
 	});
 });
