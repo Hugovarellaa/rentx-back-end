@@ -22,7 +22,7 @@ class CarsRepositoryInMemory implements ICarsRepository {
 	}
 
 	async findAllAvailable(): Promise<Car[]> {
-		return this.cars;
+		return this.cars.filter((car) => car.available === true);
 	}
 }
 
