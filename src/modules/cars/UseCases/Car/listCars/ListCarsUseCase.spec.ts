@@ -12,6 +12,8 @@ describe('List Cars', () => {
 	});
 
 	it('should be able to list all available cars', async () => {
-		await listCarsUseCase.execute();
+		const cars = await listCarsUseCase.execute();
+
+		console.log(cars);
 	});
 });
