@@ -1,5 +1,5 @@
 class ListCarsUseCase {
-	execute(): Promise<void> {}
+	async execute(): Promise<void> {}
 }
 
 export { ListCarsUseCase };
