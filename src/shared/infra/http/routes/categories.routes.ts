@@ -16,7 +16,7 @@ const importCategoriesController = new ImportCategoriesController();
 
 const upload = multer({ dest: 'uploads/' });
 
-categoriesRoutes.post('/', createCategoriesController.handle);
+categoriesRoutes.post('/', ensureAuthenticated, ensureAdmin, createCategoriesController.handle);
 
 categoriesRoutes.get('/', listCategoriesController.handle);
 
