@@ -1,3 +1,5 @@
-class ListCarsUseCase {}
+class ListCarsUseCase {
+	execute(): Promise<void> {}
+}
 
 export { ListCarsUseCase };
