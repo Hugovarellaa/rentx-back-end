@@ -12,5 +12,5 @@ export async function ensureAdmin(request: Request, response: Response, next: Ne
 		throw new AppError("User isn't Admin!");
 	}
 
-	return next;
+	return next();
 }
