@@ -9,7 +9,7 @@ class CreateCarController {
 
 		const createCarUseCase = container.resolve(CreateCarUseCase);
 
-		const car = createCarUseCase.execute({
+		const car = await createCarUseCase.execute({
 			name,
 			description,
 			daily_rate,
