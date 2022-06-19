@@ -1,5 +1,7 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, JoinColumn, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
+
+import { Category } from './Category';
 
 @Entity('cars')
 class Car {
@@ -26,6 +28,9 @@ class Car {
 
 	@Column()
 	brand: string;
+
+	@JoinColumn({ name: 'category_id' })
+	category: Category;
 
 	@Column()
 	category_id: string;
