@@ -27,6 +27,7 @@ class Car {
 	@Column()
 	brand: string;
 
+	@Column()
 	category_id: string;
 
 	@CreateDateColumn()
