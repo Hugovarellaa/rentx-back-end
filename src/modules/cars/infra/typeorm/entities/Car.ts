@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
 @Entity('cars')
@@ -26,7 +26,10 @@ class Car {
 
 	@Column()
 	brand: string;
+
 	category_id: string;
+
+	@CreateDateColumn()
 	created_at: Date;
 
 	constructor() {
