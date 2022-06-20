@@ -8,6 +8,8 @@ class Car {
 
 	@Column()
 	name: string;
+
+	@Column()
 	description: string;
 	daily_rate: number;
 	available: boolean;
