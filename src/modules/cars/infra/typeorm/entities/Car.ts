@@ -20,6 +20,8 @@ class Car {
 
 	@Column()
 	license_plate: string;
+
+	@Column()
 	fine_amount: number;
 	brand: string;
 	category_id: string;
