@@ -1,10 +1,12 @@
-import { Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
 @Entity('cars')
 class Car {
 	@PrimaryColumn()
 	id?: string;
+
+	@Column()
 	name: string;
 	description: string;
 	daily_rate: number;
