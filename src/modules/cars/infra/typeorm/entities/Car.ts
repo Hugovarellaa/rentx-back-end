@@ -23,6 +23,8 @@ class Car {
 
 	@Column()
 	fine_amount: number;
+
+	@Column()
 	brand: string;
 	category_id: string;
 	created_at: Date;
