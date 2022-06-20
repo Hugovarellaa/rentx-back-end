@@ -17,6 +17,8 @@ class Car {
 
 	@Column()
 	available: boolean;
+
+	@Column()
 	license_plate: string;
 	fine_amount: number;
 	brand: string;
