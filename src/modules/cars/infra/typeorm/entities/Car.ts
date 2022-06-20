@@ -14,6 +14,8 @@ class Car {
 
 	@Column()
 	daily_rate: number;
+
+	@Column()
 	available: boolean;
 	license_plate: string;
 	fine_amount: number;
