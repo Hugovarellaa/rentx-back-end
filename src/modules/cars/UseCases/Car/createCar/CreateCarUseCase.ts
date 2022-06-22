@@ -18,7 +18,7 @@ class CreateCarUseCase {
 		private carsRepository: ICarsRepository,
 	) {}
 
-	async execute(data: IRequest) {
+	async execute(data: IRequest): Promise<void> {
 		const { name, description, daily_rato, license_plate, fine_amount, brand, category_id } = data;
 
 		const carAlreadyExists = await this.carsRepository.findByLicensesPlate(license_plate);
