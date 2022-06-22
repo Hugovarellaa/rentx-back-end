@@ -22,4 +22,6 @@ describe('Create Car', () => {
 			category_id: 'category',
 		});
 	});
+
+	it('should be able to create a car with exists license plate', () => {});
 });
