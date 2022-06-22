@@ -1,4 +1,5 @@
 import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
+import { AppError } from '@shared/errors/AppError';
 
 interface IRequest {
 	name: string;
@@ -19,6 +20,11 @@ class CreateCarUseCase {
 
 	async execute(data: IRequest) {
 		const { name, description, daily_rato, license_plate, fine_amount, brand, category_id } = data;
+
+		const carAlreadyExists = await this.carsRepository.findByLicensesPlate(license_plate);
+		if (carAlreadyExists) {
+			throw new AppError('Car already exists');
+		}
 
 		await this.carsRepository.create({ name, description, daily_rato, license_plate, fine_amount, brand, category_id });
 	}
