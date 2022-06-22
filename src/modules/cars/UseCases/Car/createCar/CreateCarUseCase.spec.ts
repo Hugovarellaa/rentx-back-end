@@ -47,4 +47,6 @@ describe('Create Car', () => {
 			});
 		}).rejects.toBeInstanceOf(AppError);
 	});
+
+	it('should be able to create a car available by default', () => {});
 });
