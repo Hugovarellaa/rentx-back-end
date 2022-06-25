@@ -1,3 +1,6 @@
-class CreateCarUseCase {}
+class CreateCarUseCase {
+	constructor() {}
+	execute() {}
+}
 
 export { CreateCarUseCase };
