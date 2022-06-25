@@ -1,5 +1,7 @@
+import { ICreateCarsDTO } from '../dtos/ICreateCarsDTO';
+
 interface ICarsRepository {
-	create(): void;
+	create(data: ICreateCarsDTO): Promise<void>;
 }
 
 export { ICarsRepository };
