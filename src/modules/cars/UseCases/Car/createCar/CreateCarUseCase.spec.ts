@@ -7,5 +7,15 @@ describe('Create Car', () => {
 		createCarUseCase = new CreateCarUseCase();
 	});
 
-	it('should be able to create a new car', () => {});
+	it('should be able to create a new car', async () => {
+		await createCarUseCase.execute({
+			name: 'Name Car',
+			description: 'Description Car',
+			daily_rato: 100,
+			license_plate: 'ABC-123',
+			fine_amount: 22,
+			brand: 'Brand',
+			category_id: 'category',
+		});
+	});
 });
