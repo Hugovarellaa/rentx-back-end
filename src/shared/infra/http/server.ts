@@ -3,9 +3,10 @@ import 'reflect-metadata';
 import swaggerUi from 'swagger-ui-express';
 
 import '@shared/container';
+import { AppError } from '@shared/errors/AppError';
 import 'express-async-errors';
 import './database';
-import { AppError } from './errors/AppError';
+
 import { router } from './routes';
 import swaggerDocument from './swagger.json';
 
