@@ -7,8 +7,8 @@ import { AppError } from '@shared/errors/AppError';
 import 'express-async-errors';
 import './database';
 
+import swaggerDocument from '../../../swagger.json';
 import { router } from './routes';
-import swaggerDocument from './swagger.json';
 
 const app = express();
 app.use(express.json());
