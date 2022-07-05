@@ -2,6 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 
 import { CreateCategoriesController } from '@modules/cars/UseCases/Categories/createCategories/CreateCategoriesController';
+import { ListCategoriesController } from '@modules/cars/UseCases/Categories/listCategories/ListCategoriesController';
 
 const categoriesRoutes = Router();
 
