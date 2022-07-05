@@ -6,9 +6,9 @@ import { AppError } from '@shared/errors/AppError';
 import 'express-async-errors';
 import './database';
 
-import { router } from './routes';
-
 import './shared/container';
+
+import { router } from '@shared/infra/http/routes';
 
 import swaggerDocument from './swagger.json';
 
