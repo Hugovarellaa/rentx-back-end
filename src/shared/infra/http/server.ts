@@ -5,7 +5,7 @@ import swaggerUi from 'swagger-ui-express';
 import '@shared/container';
 import { AppError } from '@shared/errors/AppError';
 import 'express-async-errors';
-import './database';
+import '../typeorm';
 
 import swaggerDocument from '../../../swagger.json';
 import { router } from './routes';
