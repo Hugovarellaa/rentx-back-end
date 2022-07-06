@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import multer from 'multer';
 
+import uploadConfig from '@config/upload';
 import { CreateUsersController } from '@modules/accounts/useCases/createUsers/CreateUsersController';
 import { UpdateUserAvatarController } from '@modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarController';
 
