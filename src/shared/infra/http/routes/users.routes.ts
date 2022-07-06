@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import multer from 'multer';
 
+import { CreateUsersController } from '@modules/accounts/useCases/createUsers/CreateUsersController';
+
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
 const usersRoutes = Router();
