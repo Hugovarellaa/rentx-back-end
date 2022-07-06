@@ -2,6 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 
 import { CreateUsersController } from '@modules/accounts/useCases/createUsers/CreateUsersController';
+import { UpdateUserAvatarController } from '@modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarController';
 
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
