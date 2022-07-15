@@ -1,5 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
+import { ISpecificationsRepository } from '../ISpecificationsRepository';
+
 class SpecificationsRepository implements ISpecificationsRepository {
 	private repository: Repository<Specification>;
 
