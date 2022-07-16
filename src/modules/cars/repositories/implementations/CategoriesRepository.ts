@@ -1,5 +1,7 @@
 import { getRepository, Repository } from 'typeorm';
 
+import { Category } from '@modules/cars/entities/Category';
+
 class CategoriesRepository implements ICategoriesRepository {
 	repository: Repository<Category>;
 
