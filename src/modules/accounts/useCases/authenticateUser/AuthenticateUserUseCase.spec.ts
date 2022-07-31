@@ -40,4 +40,6 @@ describe('Authenticated user', () => {
 			});
 		}).rejects.toBeInstanceOf(AppError);
 	});
+
+	it('should not be able to authenticate with incorrect password', () => {});
 });
