@@ -6,7 +6,12 @@ class UsersRepositoryInMemory implements IUsersRepository {
 	users: User[] = [];
 
 	async create(data: ICreateUsersDTO): Promise<void> {
-		throw new Error('Method not implemented.');
+		const { email, password, name, driver_license, avatar, id } = data;
+
+		const user = new User();
+		Object.assign(user, { email, password, name, driver_license, avatar, id });
+
+		this.users.push(user);
 	}
 	findByEmail(email: string): Promise<User> {
 		throw new Error('Method not implemented.');
