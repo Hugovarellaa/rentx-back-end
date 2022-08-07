@@ -12,8 +12,8 @@ class CategoriesRepositoryInMemory implements ICategoriesRepository {
 
 		this.categories.push(category);
 	}
-	getAll(): Promise<Category[]> {
-		throw new Error('Method not implemented.');
+	async getAll(): Promise<Category[]> {
+		return this.categories;
 	}
 	findByName(name: string): Promise<Category> {
 		throw new Error('Method not implemented.');
