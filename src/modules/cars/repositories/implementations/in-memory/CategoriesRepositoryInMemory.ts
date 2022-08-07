@@ -15,8 +15,8 @@ class CategoriesRepositoryInMemory implements ICategoriesRepository {
 	async getAll(): Promise<Category[]> {
 		return this.categories;
 	}
-	findByName(name: string): Promise<Category> {
-		throw new Error('Method not implemented.');
+	async findByName(name: string): Promise<Category> {
+		return this.categories.find((c) => c.name === name);
 	}
 }
 
