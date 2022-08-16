@@ -1,3 +1,5 @@
-class UpdateUserAvatarUseCase {}
+class UpdateUserAvatarUseCase {
+	async execute() {}
+}
 
 export { UpdateUserAvatarUseCase };
