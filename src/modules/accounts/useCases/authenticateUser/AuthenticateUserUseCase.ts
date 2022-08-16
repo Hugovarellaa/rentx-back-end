@@ -35,7 +35,7 @@ class AuthenticateUserUseCase {
 		// Password they are the same
 		const passwordMatch = await compare(password, user.password);
 		if (!passwordMatch) {
-			throw new Error(`Email or Password not incorrect`);
+			throw new AppError(`Email or Password not incorrect`);
 		}
 
 		// create jsonwebtoken
