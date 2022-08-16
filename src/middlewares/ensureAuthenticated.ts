@@ -28,6 +28,6 @@ export async function ensureAuthenticated(request: Request, response: Response, 
 
 		return next();
 	} catch {
-		throw new Error(`Invalid token authorization`);
+		throw new AppError(`Invalid token authorization`);
 	}
 }
