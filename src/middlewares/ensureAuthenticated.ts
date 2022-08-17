@@ -20,7 +20,7 @@ export async function ensureAuthenticated(request: Request, response: Response, 
 		const { sub: user_id } = verify(token, 'supersecret123') as IPayload;
 
 		const usersRepository = new UsersRepository();
-		usersRepository.findById(user_id);
+		const user = await usersRepository.findById(user_id);
 	} catch {
 		throw new Error(`Invalid token authorization`);
 	}
