@@ -1,6 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
 
+interface IPayload {
+	sub: string;
+}
+
 export async function ensureAuthenticated(request: Request, response: Response, next: NextFunction) {
 	const authHeader = request.headers.authorization;
 
@@ -11,8 +15,8 @@ export async function ensureAuthenticated(request: Request, response: Response, 
 	const [, token] = authHeader.split(' ');
 
 	try {
-		const decoded = verify(token, 'supersecret123');
-		console.log(decoded);
+		const { sub } = verify(token, 'supersecret123') as IPayload;
+		console.log(sub);
 	} catch {
 		throw new Error(`Invalid token authorization`);
 	}
