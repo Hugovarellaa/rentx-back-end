@@ -1,9 +1,22 @@
+import { getRepository, Repository } from 'typeorm';
+
 import { ICreateUsersDTO } from '../../dtos/CreateUsersDTO';
+import { User } from '../../entities/User';
 import { IUsersRepository } from '../IUsersRepository';
 
 class UsersRepository implements IUsersRepository {
-	create(data: ICreateUsersDTO): Promise<void> {
-		throw new Error('Method not implemented.');
+	private repository: Repository<User>;
+
+	constructor() {
+		this.repository = getRepository(User);
+	}
+
+	async create(data: ICreateUsersDTO): Promise<void> {
+		const { name, driver_license, email, password, username } = data;
+
+		const user = this.repository.create({ name, driver_license, email, password, username });
+
+		await this.repository.save(user);
 	}
 }
 
