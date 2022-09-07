@@ -1,21 +1,14 @@
+import { getRepository, Repository } from 'typeorm';
+
 import { ICreateSpecificationsDTO } from '../../dtos/ICreateSpecificationsDTO';
 import { Specification } from '../../entities/Specification';
 import { ISpecificationsRepository } from '../ISpecificationsRepository';
 
 class SpecificationsRepository implements ISpecificationsRepository {
-	specifications: Specification[];
-
-	public static instance: SpecificationsRepository;
+	private repository: Repository<Specification>;
 
 	private constructor() {
-		this.specifications = [];
-	}
-
-	public static getInstance(): SpecificationsRepository {
-		if (!SpecificationsRepository.instance) {
-			SpecificationsRepository.instance = new SpecificationsRepository();
-		}
-		return SpecificationsRepository.instance;
+		this.repository = getRepository(Specification);
 	}
 
 	create({ name, description }: ICreateSpecificationsDTO): void {
