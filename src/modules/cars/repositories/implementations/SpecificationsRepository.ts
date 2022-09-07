@@ -17,8 +17,8 @@ class SpecificationsRepository implements ISpecificationsRepository {
 		await this.repository.save(specifications);
 	}
 
-	getAll(): Specification[] {
-		return this.specifications;
+	async getAll(): Promise<Specification[]> {
+		return this.repository.find();
 	}
 	findByName(name: string): Specification {
 		return this.specifications.find((spec) => spec.name === name);
