@@ -6,6 +6,7 @@ import { ImportCategoriesController } from '../modules/cars/UseCases/Categories/
 import { ListCategoriesController } from '../modules/cars/UseCases/Categories/listCategories/ListCategoriesController';
 
 const categoriesRoutes = Router();
+
 const createCategoriesController = new CreateCategoriesController();
 const listCategoriesController = new ListCategoriesController();
 const importCategoriesController = new ImportCategoriesController();
