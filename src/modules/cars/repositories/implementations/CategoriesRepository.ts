@@ -18,8 +18,8 @@ class CategoriesRepository implements ICategoriesRepository {
 		await this.repository.save(category);
 	}
 
-	getAll(): Category[] {
-		return this.categories;
+	async getAll(): Promise<Category[]> {
+		return this.repository.find();
 	}
 	findByName(name: string): Category {
 		return this.categories.find((c) => c.name === name);
