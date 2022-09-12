@@ -21,8 +21,8 @@ class CategoriesRepository implements ICategoriesRepository {
 	async getAll(): Promise<Category[]> {
 		return this.repository.find();
 	}
-	findByName(name: string): Category {
-		return this.categories.find((c) => c.name === name);
+	async findByName(name: string): Promise<Category> {
+		return this.repository.findOne({ name });
 	}
 }
 
