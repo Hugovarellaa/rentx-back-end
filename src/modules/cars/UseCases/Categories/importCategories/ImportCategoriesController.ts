@@ -10,7 +10,7 @@ class ImportCategoriesController {
 
 		this.importCategoriesUseCase.execute(file);
 
-		return response.json(file);
+		return response.send();
 	}
 }
 
