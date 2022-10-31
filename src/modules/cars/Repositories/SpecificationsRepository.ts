@@ -1,7 +1,7 @@
 import { Specification } from "../model/Specification";
 import {
   ICreateCategoryDTO,
-  ISpecificationsRepository
+  ISpecificationsRepository,
 } from "./ISpecificationsRepository";
 
 class SpecificationsRepository implements ISpecificationsRepository {
