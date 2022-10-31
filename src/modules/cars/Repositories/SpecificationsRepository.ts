@@ -1,3 +1,0 @@
-class SpecificationsRepository {}
-
-export { SpecificationsRepository };
