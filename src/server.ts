@@ -1,12 +1,13 @@
 import express from "express";
+import swaggerUi from "swagger-ui-express";
 
-import { categoriesRoutes } from "./routes/categories.routes";
-import { specificationsRoutes } from "./routes/specification.routes";
+import swaggerFile from "../swagger.json";
+import { router } from "./routes";
 
 const app = express();
 
 app.use(express.json());
-app.use("/categories", categoriesRoutes);
-app.use("/specification", specificationsRoutes);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use(router);
 
 app.listen(3333, () => console.log("Server started on port 3333"));
