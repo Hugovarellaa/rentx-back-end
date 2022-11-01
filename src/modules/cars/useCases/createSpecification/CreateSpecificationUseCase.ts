@@ -1,15 +1,27 @@
-import { Request, Response } from "express";
+import { inject, injectable } from "tsyringe";
 
-import { CreateSpecificationUseCase } from "./CreateSpecificationService";
+import { ISpecificationsRepository } from "../../Repositories/ISpecificationsRepository";
 
-class CreateSpecificationController {
-  constructor(private createSpecificationUseCase: CreateSpecificationUseCase) {}
-  handle(request: Request, response: Response) {
-    const { name, description } = request.body;
+interface IRequest {
+  name: string;
+  description: string;
+}
+@injectable()
+class CreateSpecificationUseCase {
+  constructor(
+    @inject("SpecificationsRepository")
+    private specificationRepository: ISpecificationsRepository
+  ) {}
+  execute({ name, description }: IRequest) {
+    const specificationAlreadyExists =
+      this.specificationRepository.findByName(name);
 
-    this.createSpecificationUseCase.execute({ name, description });
-    return response.status(201).send();
+    if (specificationAlreadyExists) {
+      throw new Error(`Specification ${name} already exists`);
+    }
+
+    this.specificationRepository.create({ name, description });
   }
 }
 
-export { CreateSpecificationController };
+export { CreateSpecificationUseCase };
