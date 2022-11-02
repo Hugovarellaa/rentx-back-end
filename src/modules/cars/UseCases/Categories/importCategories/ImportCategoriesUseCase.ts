@@ -2,7 +2,14 @@ import { CategoriesRepository } from '../../../repositories/implementations/Cate
 
 class ImportCategoriesUseCase {
 	constructor(private categoriesRepository: CategoriesRepository) {}
-	execute(file: Express.Multer.File) {}
+
+	loadCategories(file: Express.Multer.File) {
+		console.log(file);
+	}
+
+	async execute(file: Express.Multer.File) {
+		const categories = await this.loadCategories(file);
+	}
 }
 
 export { ImportCategoriesUseCase };
