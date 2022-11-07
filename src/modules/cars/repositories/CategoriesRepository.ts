@@ -1,13 +1,25 @@
+/* eslint-disable prettier/prettier */
 import { Category } from '../model/Category'
 import {
     ICategoriesRepository,
-    ICreateCategoryDTO,
+    ICreateCategoryDTO
 } from './implementations/ICategoriesRepository'
 
 class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[]
-    constructor() {
+
+    private static INSTANCE: CategoriesRepository
+
+    private constructor() {
         this.categories = []
+    }
+
+    public static getInstance(): CategoriesRepository {
+        if (!CategoriesRepository.INSTANCE) {
+            CategoriesRepository.INSTANCE = new CategoriesRepository()
+        }
+
+        return CategoriesRepository.INSTANCE
     }
 
     create({ name, description }: ICreateCategoryDTO): void {
@@ -23,7 +35,7 @@ class CategoriesRepository implements ICategoriesRepository {
 
     findByName(name: string) {
         const category = this.categories.find(
-            (category) => category.name === name,
+            (category) => category.name === name
         )
         return category
     }

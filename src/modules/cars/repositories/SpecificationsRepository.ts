@@ -1,7 +1,7 @@
 import { Specification } from '../model/Specification'
 import {
     ICreateSpecificationDTO,
-    ISpecificationsRepository,
+    ISpecificationsRepository
 } from './implementations/ISpecificationsRepository'
 
 class SpecificationsRepository implements ISpecificationsRepository {
@@ -15,14 +15,14 @@ class SpecificationsRepository implements ISpecificationsRepository {
         Object.assign(specification, {
             name,
             description,
-            created_at: new Date(),
+            created_at: new Date()
         })
         this.specifications.push(specification)
     }
 
     findByName(name: string): Specification {
         const specificationAlreadyExist = this.specifications.find(
-            (specification) => specification.name === name,
+            (specification) => specification.name === name
         )
 
         return specificationAlreadyExist
