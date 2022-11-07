@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 
 import { ImportCategoryUseCase } from './ImportCategoryUseCase'
 
-class ImportCategryController {
+class ImportCategoryController {
     constructor(private importCategoryUseCase: ImportCategoryUseCase) {}
     handle(request: Request, response: Response): Response {
         const { file } = request
@@ -12,4 +12,4 @@ class ImportCategryController {
     }
 }
 
-export { ImportCategryController }
+export { ImportCategoryController }
