@@ -13,7 +13,7 @@ class CreateCategoryService {
             this.categoriesRepositories.findByName(name)
 
         if (categoriesAlreadyExists) {
-            throw new Error(`Cannot create category`)
+            throw new Error(`Category ${name} already exists `)
         }
 
         this.categoriesRepositories.create({ name, description })
