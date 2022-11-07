@@ -12,12 +12,12 @@ categoriesRoutes.post('/', (request, response) => {
         id: uuidV4(),
         name,
         description,
-        createdAt: new Date(),
+        created_at: new Date(),
     }
 
     categories.push(category)
 
-    return response.status(201).json({ category })
+    return response.status(201).send()
 })
 
 export { categoriesRoutes }
