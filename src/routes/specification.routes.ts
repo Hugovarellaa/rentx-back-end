@@ -9,7 +9,7 @@ const specificationRepository = new SpecificationsRepository()
 specificationsRoutes.post('/', (request, response) => {
     const { name, description } = request.body
     const createSpecificationService = new CreateSpecificationService(
-        specificationRepository,
+        specificationRepository
     )
     createSpecificationService.execute({ name, description })
 
