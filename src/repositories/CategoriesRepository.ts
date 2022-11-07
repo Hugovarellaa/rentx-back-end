@@ -24,10 +24,10 @@ class CategoriesRepository {
     }
 
     findByName(name: string) {
-        const categoryAlreadyExists = this.categories.find(
+        const category = this.categories.find(
             (category) => category.name === name,
         )
-        return categoryAlreadyExists
+        return category
     }
 }
 
