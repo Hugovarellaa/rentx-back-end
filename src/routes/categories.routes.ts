@@ -2,8 +2,14 @@ import { Router } from 'express'
 
 const categoriesRoutes = Router()
 
+const categories = []
+
 categoriesRoutes.post('/', (request, response) => {
-    return response.json({ ok: true })
+    const { name, description } = request.body
+
+    categories.push({ name, description })
+
+    return response.status(201).json(categories)
 })
 
 export { categoriesRoutes }
