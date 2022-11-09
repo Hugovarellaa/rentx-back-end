@@ -19,7 +19,7 @@ class CategoriesRepository {
 
         this.categories.push(category)
     }
-    async list(): Promise<Category[]> {
+    list(): Category[] {
         return this.categories
     }
 }
