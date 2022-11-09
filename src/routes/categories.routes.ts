@@ -8,11 +8,11 @@ const categoriesRoutes = Router()
 const categoriesRepository = new CategoriesRepository()
 
 categoriesRoutes.post('/', (request, response) => {
-    createCategoryController.handle(request, response)
+    return createCategoryController.handle(request, response)
 })
 
 categoriesRoutes.get('/', (request, response) => {
-    listCategoryController.handle(request, response)
+    return listCategoryController.handle(request, response)
 })
 
 export { categoriesRoutes }
