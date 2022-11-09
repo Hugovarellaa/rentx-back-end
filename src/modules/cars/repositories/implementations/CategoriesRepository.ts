@@ -13,7 +13,7 @@ class CategoriesRepository implements ICategoriesRepository {
 
     async create({ name, description }: ICreateCategoryDTO): Promise<void> {
         const category: Category = new Category()
-        Object.assign(category, { name, description, create_ad: new Date() })
+        Object.assign(category, { name, description, created_ad: new Date() })
 
         this.categories.push(category)
     }

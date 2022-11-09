@@ -4,7 +4,7 @@ class Category {
     id?: string
     name: string
     description: string
-    create_ad: Date
+    created_ad: Date
 
     constructor() {
         if (!this.id) {
