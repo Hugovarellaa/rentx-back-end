@@ -12,3 +12,4 @@ docker-componse.yml
 
 # Ignore all HTML files:
 *.html
+*.yml
