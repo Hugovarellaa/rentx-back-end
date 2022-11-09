@@ -8,12 +8,8 @@ const categories: Category[] = []
 
 categoriesRoutes.post('/', (request, response) => {
     const { name, description } = request.body
-
-    const category: Category = {
-        name,
-        description,
-        create_ad: new Date()
-    }
+    const category: Category = new Category()
+    Object.assign(category, { name, description, create_ad: new Date() })
 
     categories.push(category)
 
