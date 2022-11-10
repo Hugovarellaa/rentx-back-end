@@ -1,5 +1,7 @@
 import express from 'express'
+import 'reflect-metadata'
 import swaggerUi from 'swagger-ui-express'
+import './database'
 
 import swaggerDocument from '../swagger.json'
 import { router } from './routes'
