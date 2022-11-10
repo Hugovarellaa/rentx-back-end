@@ -3,7 +3,7 @@ import fs from 'fs'
 
 import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository'
 
-interface IIMportCategory {
+interface IImportCategory {
     name: string
     description: string
 }
@@ -11,9 +11,9 @@ interface IIMportCategory {
 class ImportCategoriesUseCase {
     constructor(private categoryRepository: CategoriesRepository) {}
 
-    loadCategories(file: Express.Multer.File): Promise<IIMportCategory[]> {
+    loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
         return new Promise((resolve, reject) => {
-            const categories: IIMportCategory[] = []
+            const categories: IImportCategory[] = []
 
             const stream = fs.createReadStream(file.path)
 
