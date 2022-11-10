@@ -4,7 +4,7 @@ class Specification {
     id?: string
     name: string
     description: string
-    created_ad: Date
+    created_at: Date
 
     constructor() {
         if (!this.id) {
