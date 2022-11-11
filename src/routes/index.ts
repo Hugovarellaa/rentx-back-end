@@ -3,7 +3,7 @@ import { Router } from 'express'
 import { authenticateRoutes } from './authenticate.routes'
 import { categoriesRoutes } from './categories.routes'
 import { specificationRoutes } from './specification.routes'
-import { usersRoutes } from './user.routes'
+import { usersRoutes } from './users.routes'
 
 const router = Router()
 
