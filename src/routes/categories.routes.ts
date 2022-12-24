@@ -8,6 +8,13 @@ const categories = [];
 categoriesRoutes.post('/', (request, response) => {
 	const { name, description } = request.body;
 
+	const categoriesAlreadyExists = categories.some(
+		(category) => category.name === name,
+	);
+	if (categoriesAlreadyExists) {
+		return response.status(400).json({ error: 'Category already exists.' });
+	}
+
 	const category = {
 		id: uuidV4(),
 		name,
