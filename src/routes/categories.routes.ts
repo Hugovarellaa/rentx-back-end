@@ -5,12 +5,15 @@ import { CreateCategoryServices } from '../services/CreateCategoryServices';
 
 const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();
-const createCategoryServices = new CreateCategoryServices(categoriesRepository);
 
 categoriesRoutes.post('/', (request, response) => {
 	const { name, description } = request.body;
 
+	const createCategoryServices = new CreateCategoryServices(
+		categoriesRepository,
+	);
 	createCategoryServices.execute({ name, description });
+
 	return response.status(201).send();
 });
 

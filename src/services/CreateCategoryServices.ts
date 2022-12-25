@@ -7,7 +7,7 @@ interface IRequest {
 
 class CreateCategoryServices {
 	constructor(private categoriesRepository: CategoriesRepository) {}
-	execute({ name, description }: IRequest) {
+	execute({ name, description }: IRequest): void {
 		const categoryAlreadyExists = this.categoriesRepository.findByName(name);
 
 		if (categoryAlreadyExists) {
