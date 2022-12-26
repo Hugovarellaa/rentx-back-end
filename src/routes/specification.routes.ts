@@ -17,4 +17,9 @@ specificationsRoutes.post('/', async (request, response) => {
 	return response.status(201).send();
 });
 
+specificationsRoutes.get('/', async (request, response) => {
+	const specifications = specificationsRepository.list();
+	return response.status(200).send(specifications);
+});
+
 export { specificationsRoutes };
