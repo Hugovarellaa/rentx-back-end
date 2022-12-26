@@ -20,6 +20,7 @@ services:
     build: .
     ports:
       - 8080:8080
+      - 9229:9229 # Inserir essa porta tbm pra poder usar o debug
     volumes:
       - .:/usr/app
     links:
