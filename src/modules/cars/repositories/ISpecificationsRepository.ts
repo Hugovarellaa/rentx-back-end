@@ -1,0 +1,3 @@
+class ISpecificationsRepository {}
+
+export { ISpecificationsRepository };
