@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: rentx
+    restart: always
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/usr/app

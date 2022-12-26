@@ -2,6 +2,7 @@
 FROM node:latest
 
 # Qual diretorio destinado para os arquivos
+# Tambem e o nosso volumes no docker-compose
 WORKDIR /usr/app
 
 # Qual arquivo vou copiar
