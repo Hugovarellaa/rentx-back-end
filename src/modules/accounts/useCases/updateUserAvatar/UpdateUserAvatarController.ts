@@ -1,5 +1,7 @@
+import { Request, Response } from 'express';
+
 class UpdateUserAvatarController {
-	handle() {}
+	async handle(request: Request, response: Response): Promise<void> {}
 }
 
 export { UpdateUserAvatarController };
