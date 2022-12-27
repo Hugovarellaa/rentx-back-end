@@ -7,7 +7,6 @@ import {
 } from '../ICategoryRepository';
 
 class CategoriesRepository implements ICategoryRepository {
-	private static instance: CategoriesRepository;
 	private repository: Repository<Category>;
 
 	constructor() {
