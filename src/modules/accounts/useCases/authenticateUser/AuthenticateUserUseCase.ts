@@ -17,9 +17,6 @@ interface IResponse {
 	token: string;
 }
 
-const secret = 'b76f2ce51925297753631558bd317131';
-const JWT_SECRET = process.env.JWT_SECRET || secret;
-
 @injectable()
 class AuthenticateUserUseCase {
 	constructor(
@@ -40,7 +37,7 @@ class AuthenticateUserUseCase {
 		}
 
 		// Gerar jsonwebtoken
-		const token = sign({}, JWT_SECRET, {
+		const token = sign({}, 'b76f2ce51925297753631558bd317131', {
 			subject: user.id,
 			expiresIn: '1d',
 		});
