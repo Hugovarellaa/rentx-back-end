@@ -16,7 +16,6 @@ class UsersRepository implements IUsersRepository {
 			name: data.name,
 			email: data.email,
 			password: data.password,
-			username: data.username,
 			driver_license: data.driver_license,
 		});
 
