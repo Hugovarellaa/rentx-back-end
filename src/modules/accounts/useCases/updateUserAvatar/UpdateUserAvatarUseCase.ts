@@ -18,7 +18,6 @@ class UpdateUserAvatarUseCase {
 		const user = await this.usersRepository.findById(user_id);
 
 		if (user.avatar) {
-			// Entra na pasta do upload e verificar se existir o avatar igual e deletar
 			await deleteFile(`./uploads/avatar/${user.avatar}`);
 		}
 
