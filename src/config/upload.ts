@@ -7,11 +7,11 @@ export default {
 		return {
 			storage: multer.diskStorage({
 				destination: resolve(__dirname, '..', '..', folder),
-				filename: (request, file, cb) => {
+				filename: (request, file, callback) => {
 					const fileHash = crypto.randomBytes(16).toString('hex');
-					const filename = `${file.originalname}-${fileHash}`;
+					const fileName = `${fileHash}-${file.originalname}`;
 
-					return cb(null, filename);
+					return callback(null, fileName);
 				},
 			}),
 		};
