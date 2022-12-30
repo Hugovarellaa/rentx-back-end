@@ -3,9 +3,19 @@ import { Specification } from '../../entities/Specification';
 import { ISpecificationsRepository } from '../ISpecificationsRepository';
 
 class SpecificationsRepository implements ISpecificationsRepository {
-	create({ name, description }: ICreateSpecificationsDTO): void {
-		throw new Error('Method not implemented.');
+	specifications: Specification[];
+
+	constructor() {
+		this.specifications = [];
 	}
+
+	create({ name, description }: ICreateSpecificationsDTO): void {
+		const specification = new Specification();
+		Object.assign(specification, { name, description });
+
+		this.specifications.push(specification);
+	}
+
 	getAll(): Specification[] {
 		throw new Error('Method not implemented.');
 	}
