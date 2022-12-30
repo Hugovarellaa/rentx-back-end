@@ -20,7 +20,7 @@ class SpecificationsRepository implements ISpecificationsRepository {
 		return this.specifications;
 	}
 	findByName(name: string): Specification {
-		throw new Error('Method not implemented.');
+		return this.specifications.find((spec) => spec.name === name);
 	}
 }
 
