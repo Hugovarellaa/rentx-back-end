@@ -17,7 +17,7 @@ class SpecificationsRepository implements ISpecificationsRepository {
 	}
 
 	getAll(): Specification[] {
-		throw new Error('Method not implemented.');
+		return this.specifications;
 	}
 	findByName(name: string): Specification {
 		throw new Error('Method not implemented.');
