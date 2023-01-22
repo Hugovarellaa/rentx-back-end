@@ -1,0 +1,3 @@
+class ListCategoriesUseCase {}
+
+export { ListCategoriesUseCase };
