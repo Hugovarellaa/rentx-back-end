@@ -1,10 +1,11 @@
 import express from 'express';
 
-const PORT = 3333;
+import { categoriesRoutes } from './routes/categories.routes';
+
+const PORT = 8080;
 const app = express();
+app.use(express.json());
 
-app.get('/', (req, res) => {
-	return res.json({ message: 'Hello!' });
-});
+app.use('/categories', categoriesRoutes);
 
-app.listen(3333, () => console.log(`listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`listening on port ${PORT}`));
