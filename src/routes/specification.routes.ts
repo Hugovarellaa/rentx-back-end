@@ -1,5 +1,5 @@
 import { Router } from 'express';
 
-const SpecificationsRoutes = Router();
+const specificationsRoutes = Router();
 
-export { SpecificationsRoutes };
+export { specificationsRoutes };
