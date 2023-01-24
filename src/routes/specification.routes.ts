@@ -1,11 +1,10 @@
 import { Router } from 'express';
 
-import { createSpecificationController } from '../modules/cars/useCases/createSpecification';
+import { CrateSpecificationController } from '../modules/cars/useCases/createSpecification/CreateSpecificationController';
 
 const specificationsRoutes = Router();
+const createSpecificationController = new CrateSpecificationController();
 
-specificationsRoutes.post('/', (request, response) => {
-	createSpecificationController.handle(request, response);
-});
+specificationsRoutes.post('/', createSpecificationController.handle);
 
 export { specificationsRoutes };
