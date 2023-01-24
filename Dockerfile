@@ -25,5 +25,5 @@ CMD [ "npm", "run", "dev" ]
 # ex.: sudo docker build rentx .
 
 # Comando para iniciar o container (Roda a image)
-# sudo docker run -p (Porta da aplicação no PC):(Porta do container) (Nome do container)
+# sudo docker run -p (Porta da aplicação na nossa maquina):(Porta do container) (Nome do container)
 # ex.: sudo docker run -p 8080:8080 rentx
