@@ -8,6 +8,6 @@ const app = express();
 app.use(express.json());
 
 app.use('/categories', categoriesRoutes);
-app.use('/specification', specificationsRoutes);
+app.use('/specifications', specificationsRoutes);
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
