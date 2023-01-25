@@ -5,15 +5,12 @@ import { UpdateUserAvatarUseCase } from './UpdateUserAvatarUseCase';
 
 class UpdateUserAvatarController {
 	async handle(request: Request, response: Response): Promise<Response> {
-		const { id: user_id } = request.user;
+		const { id } = request.user;
 
-		const avatar = null;
-
-		// Recebe arquivo
+		const avatar = request.file.filename;
 
 		const updateUserAvatarUseCase = container.resolve(UpdateUserAvatarUseCase);
-
-		await updateUserAvatarUseCase.execute({ user_id, avatar });
+		await updateUserAvatarUseCase.execute({ user_id: id, avatar });
 
 		return response.status(204).send();
 	}
