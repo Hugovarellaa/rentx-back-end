@@ -31,7 +31,7 @@ class AuthenticateUserUseCase {
 		}
 
 		// Senha correta?
-		const passwordMatch = compare(password, user.password);
+		const passwordMatch = await compare(password, user.password);
 		if (!passwordMatch) {
 			throw new Error('Email or password incorrect!');
 		}
