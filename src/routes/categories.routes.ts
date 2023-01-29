@@ -1,19 +1,14 @@
 import { Router } from 'express';
 
 import { Category } from '../entities/Category';
+import { createCategoriesController } from '../UseCases/Categories/createCategories';
 
 const categoriesRoutes = Router();
 
 const categories: Category[] = [];
 
 categoriesRoutes.post('/', (request, response) => {
-	const { name, description } = request.body;
-	const category = new Category();
-
-	Object.assign(category, { name, description });
-
-	categories.push(category);
-	return response.status(201).json(category);
+	createCategoriesController.handle(request, response);
 });
 
 categoriesRoutes.get('/', (request, response) => {
