@@ -20,7 +20,7 @@ class CategoriesRepository implements ICategoriesRepository {
 		return this.categories;
 	}
 	findByName(name: string): Category {
-		throw new Error('Method not implemented.');
+		return this.categories.find((c) => c.name === name);
 	}
 }
 
