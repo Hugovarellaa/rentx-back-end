@@ -150,4 +150,4 @@ A aplicação pode ser acessada em [`localhost:8080`](http://localhost:8080).
 **RN**
 
 - [x] - O usuário precisa informar uma nova senha
-- [] - O link enviado para a recuperação deve expirar em 3 horas
+- [x] - O link enviado para a recuperação deve expirar em 3 horas
