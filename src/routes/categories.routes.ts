@@ -16,4 +16,9 @@ categoriesRoutes.post('/', (request, response) => {
 	return response.status(201).json(category);
 });
 
+categoriesRoutes.get('/', (request, response) => {
+	const allCategories = categories;
+	return response.status(200).json(allCategories);
+});
+
 export { categoriesRoutes };
