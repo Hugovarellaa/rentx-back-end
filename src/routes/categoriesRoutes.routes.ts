@@ -13,7 +13,6 @@ categoriesRoutes.post('/', (request, response) => {
 
 categoriesRoutes.get('/', (request, response) => {
 	const categoriesAll = categoriesRepository.list();
-
 	return response.json(categoriesAll);
 });
 
