@@ -18,7 +18,8 @@ class CategoriesRepository implements ICategoriesRepository {
 		return category;
 	}
 	list(): Category[] {
-		throw new Error('Method not implemented.');
+		const { categories } = this;
+		return categories;
 	}
 }
 
