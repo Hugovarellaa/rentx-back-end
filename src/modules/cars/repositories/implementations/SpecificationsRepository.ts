@@ -17,7 +17,8 @@ class SpecificationsRepository implements ISpecificationsRepository {
 		return specification;
 	}
 	list(): Specification[] {
-		throw new Error('Method not implemented.');
+		const { specifications } = this;
+		return specifications;
 	}
 }
 
