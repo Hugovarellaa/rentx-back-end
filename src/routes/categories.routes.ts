@@ -1,20 +1,21 @@
 import { Router } from 'express';
 
-import { Category } from '../modules/cars/entities/Category';
+import { CategoriesRepository } from '../modules/cars/repositories/implementations/CategoriesRepository';
 
 const categoriesRoutes = Router();
-
-const categories: Category[] = [];
+const categoriesRepository = new CategoriesRepository();
 
 categoriesRoutes.post('/', (request, response) => {
 	const { name, description } = request.body;
 
-	const category = new Category();
-	Object.assign(category, { name, description });
-
-	categories.push(category);
+	categoriesRepository.create({ name, description });
 
 	return response.status(201).send();
+});
+
+categoriesRoutes.get('/', (request, response) => {
+	const categories = categoriesRepository.list();
+	return response.json(categories);
 });
 
 export { categoriesRoutes };
