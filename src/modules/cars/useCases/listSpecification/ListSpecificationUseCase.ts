@@ -1,6 +1,6 @@
 import { SpecificationsRepository } from '../../repositories/implementations/SpecificationsRepository';
 
-class ListCategoryUseCase {
+class ListSpecificationUseCase {
 	constructor(private specificationsRepository: SpecificationsRepository) {}
 	execute() {
 		const specification = this.specificationsRepository.list();
@@ -8,4 +8,4 @@ class ListCategoryUseCase {
 	}
 }
 
-export { ListCategoryUseCase };
+export { ListSpecificationUseCase };
