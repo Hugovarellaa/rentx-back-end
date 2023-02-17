@@ -14,7 +14,8 @@ class CategoriesRepository implements ICategoriesRepository {
 		this.categories.push(category);
 	}
 	findByName(name: string): Category {
-		throw new Error('Method not implemented.');
+		const category = this.categories.find((c) => c.name === name);
+		return category;
 	}
 	list(): Category[] {
 		throw new Error('Method not implemented.');
