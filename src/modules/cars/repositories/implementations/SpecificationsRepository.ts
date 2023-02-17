@@ -12,7 +12,10 @@ class SpecificationsRepository implements ISpecificationsRepository {
 		Object.assign(specification, { name, description });
 		this.specifications.push(specification);
 	}
-	findByName(name: string): Specification {}
+	findByName(name: string): Specification {
+		const specification = this.specifications.find((spec) => spec.name === name);
+		return specification;
+	}
 	list(): Specification[] {
 		throw new Error('Method not implemented.');
 	}
