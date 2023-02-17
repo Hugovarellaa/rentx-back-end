@@ -1,10 +1,10 @@
-import { SpecificationsRepository } from '../../repositories/implementations/SpecificationsRepository';
+import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository';
 
 class ListCategoryUseCase {
-	constructor(private specificationsRepository: SpecificationsRepository) {}
+	constructor(private categoriesRepository: CategoriesRepository) {}
 	execute() {
-		const specification = this.specificationsRepository.list();
-		return specification;
+		const categories = this.categoriesRepository.list();
+		return categories;
 	}
 }
 
