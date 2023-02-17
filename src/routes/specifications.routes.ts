@@ -12,7 +12,7 @@ specificationRoutes.post('/', (request, response) => {
 	const createSpecificationService = new CreateSpecificationService(specificationsRepository);
 	createSpecificationService.execute({ name, description });
 
-	return response.status(201).send(0);
+	return response.status(201).send();
 });
 
 specificationRoutes.get('/', (request, response) => {
