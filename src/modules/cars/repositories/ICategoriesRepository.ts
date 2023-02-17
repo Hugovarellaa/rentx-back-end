@@ -10,3 +10,5 @@ interface ICategoriesRepository {
 	findByName(name: string): Category;
 	list(): Category[];
 }
+
+export { ICategoriesRepository, ICreateCategoryDTO };
