@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { Category } from '../entities/Categories';
+import { Category } from '../modules/cars/entities/Categories';
 
 const categoriesRoutes = Router();
 
