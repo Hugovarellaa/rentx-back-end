@@ -1,8 +1,10 @@
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
-import 'reflect-metadata';
 
+import 'reflect-metadata';
+import './database';
 import { router } from './routes';
+import './shared/container';
 import swaggerDocument from './swagger.json';
 
 const PORT = 8080;
