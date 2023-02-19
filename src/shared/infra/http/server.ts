@@ -1,13 +1,14 @@
 import express, { NextFunction, Request, Response } from 'express';
+import 'reflect-metadata';
 import swaggerUi from 'swagger-ui-express';
 
+import '@shared/container';
+import { AppError } from '@shared/errors/AppError';
+import '@shared/infra/typeorm';
 import 'express-async-errors';
-import 'reflect-metadata';
-import './database';
-import { AppError } from './errors/AppError';
+
+import swaggerDocument from '../../../swagger.json';
 import { router } from './routes';
-import './shared/container';
-import swaggerDocument from './swagger.json';
 
 const PORT = 8080;
 

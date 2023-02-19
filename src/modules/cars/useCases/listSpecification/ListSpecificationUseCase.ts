@@ -1,12 +1,12 @@
 import { inject, injectable } from 'tsyringe';
 
-import { SpecificationsRepository } from '@modules/cars/repositories/implementations/SpecificationsRepository';
+import { ISpecificationsRepository } from '@modules/cars/repositories/ISpecificationsRepository';
 
 @injectable()
 class ListSpecificationUseCase {
 	constructor(
 		@inject('SpecificationsRepository')
-		private specificationsRepository: SpecificationsRepository,
+		private specificationsRepository: ISpecificationsRepository,
 	) {}
 
 	async execute() {
