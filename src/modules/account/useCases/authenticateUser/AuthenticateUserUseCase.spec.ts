@@ -1,3 +1,4 @@
+import { AppError } from '../../../../errors/AppError';
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
 import { UsersRepositoryInMemory } from '../../repositories/in-memory/UsersRepositoryInMemory';
 import { CreateUserUseCase } from '../createUser/CreateUserUseCase';
@@ -30,5 +31,14 @@ describe('Authenticate User', () => {
 		});
 
 		expect(result).toHaveProperty('token');
+	});
+
+	it('should not be able to authenticate an not existing user', async () => {
+		expect(async () => {
+			await authenticateUserUseCase.execute({
+				email: 'false@example.com',
+				password: '1234',
+			});
+		}).rejects.toBeInstanceOf(AppError);
 	});
 });
