@@ -52,9 +52,9 @@ A aplicação pode ser acessada em [`localhost:8080`](http://localhost:8080).
 
 **RN**
 
-- Não deve ser possível cadastrar um carro com uma placa já existente.
-- O carro deve ser cadastrado, por padrão, com disponibilidade.
-- O usuário responsável pelo cadastro deve ser um usuário administrador.
+- [x] - Não deve ser possível cadastrar um carro com uma placa já existente.
+- [x] - O carro deve ser cadastrado, por padrão, com disponibilidade.
+- \*[] - O usuário responsável pelo cadastro deve ser um usuário administrador.
 
 ### Listagem de carros
 
