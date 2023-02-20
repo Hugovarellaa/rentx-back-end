@@ -4,7 +4,7 @@ import swaggerUi from 'swagger-ui-express';
 
 import '@shared/container';
 import { AppError } from '@shared/errors/AppError';
-import '@shared/infra/typeorm';
+import createConnection from '@shared/infra/typeorm';
 import 'express-async-errors';
 
 import swaggerDocument from '../../../swagger.json';
@@ -12,6 +12,7 @@ import { router } from './routes';
 
 const PORT = 8080;
 
+createConnection();
 const app = express();
 app.use(express.json());
 app.use(router);
