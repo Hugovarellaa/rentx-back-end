@@ -14,6 +14,6 @@ const createCarSpecificationController = new CreateCarSpecificationController();
 
 carsRoutes.post('/', ensureAuthenticated, ensureAdmin, createCarController.handle);
 carsRoutes.get('/available', listAvailableCarsController.handle);
-carsRoutes.post('/specification/:id', createCarSpecificationController.handle);
+carsRoutes.post('/specification/:id', ensureAuthenticated, ensureAdmin, createCarSpecificationController.handle);
 
 export { carsRoutes };
