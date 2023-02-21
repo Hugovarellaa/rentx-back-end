@@ -13,7 +13,7 @@ class CarsRepository implements ICarsRepository {
 	}
 
 	async create(data: ICreateCarDTO): Promise<Car> {
-		const { name, brand, category_id, daily_rate, description, fine_amount, license_plate } = data;
+		const { name, brand, category_id, daily_rate, description, fine_amount, license_plate, specifications, id } = data;
 
 		const car = this.repository.create({
 			name,
@@ -23,6 +23,8 @@ class CarsRepository implements ICarsRepository {
 			description,
 			fine_amount,
 			license_plate,
+			specifications,
+			id,
 		});
 
 		await this.repository.save(car);
@@ -53,6 +55,11 @@ class CarsRepository implements ICarsRepository {
 		const cars = await carsQuery.getMany();
 
 		return cars;
+	}
+
+	async findById(id: string): Promise<Car> {
+		const car = await this.repository.findOne(id);
+		return car;
 	}
 }
 
