@@ -19,6 +19,10 @@ class CategoriesRepository implements ICategoriesRepository {
 	findByName(name: string): Category {
 		return this.categories.find((c) => c.name === name);
 	}
+
+	findAll(): Category[] {
+		return this.categories;
+	}
 }
 
 export { CategoriesRepository };
