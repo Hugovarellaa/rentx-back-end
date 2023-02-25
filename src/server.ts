@@ -1,6 +1,9 @@
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 
+import 'reflect-metadata';
+import './database';
+
 import { router } from './routes/index';
 import swaggerDocument from './swagger.json';
 
