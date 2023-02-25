@@ -4,6 +4,7 @@ import swaggerUi from 'swagger-ui-express';
 import 'express-async-errors';
 import 'reflect-metadata';
 import './database';
+// eslint-disable-next-line import-helpers/order-imports
 import { AppError } from './errors/AppError';
 import './shared/container';
 
