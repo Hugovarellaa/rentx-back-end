@@ -1,8 +1,9 @@
-import { ICreateCategoriesDTO } from '../dtos/CreateCategoriesDTO';
-import { Category } from '../entities/Category';
+import { ICreateCategoriesDTO } from '../../dtos/CreateCategoriesDTO';
+import { Category } from '../../entities/Category';
+import { ICategoryRepository } from '../ICategoryRepository';
 
-class CategoryRepository {
-	categories: Category[];
+class CategoryRepository implements ICategoryRepository {
+	private categories: Category[];
 
 	constructor() {
 		this.categories = [];
@@ -16,7 +17,7 @@ class CategoryRepository {
 		this.categories.push(category);
 	}
 
-	list(): Category[] {
+	findAll(): Category[] {
 		return this.categories;
 	}
 
