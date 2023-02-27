@@ -1,9 +1,9 @@
 import express from 'express';
 
-const app = express();
+import { router } from './routes';
 
-app.get('/a', (req, res) => {
-	return res.json({ message: 'tudo funcionando 🚀🚀🚀' });
-});
+const app = express();
+app.use(express.json());
+app.use(router);
 
 app.listen(8080, () => console.log('listening on port 8080'));
