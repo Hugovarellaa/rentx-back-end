@@ -1,5 +1,4 @@
 import { ICreateCategoriesDTO } from '../../dtos/CreateCategoriesDTO';
-import { Category } from '../../entities/Category';
 import { Specification } from '../../entities/Specification';
 import { ISpecificationRepository } from '../ISpecificationRepository';
 
@@ -11,20 +10,19 @@ class SpecificationRepository implements ISpecificationRepository {
 	}
 
 	create({ name, description }: ICreateCategoriesDTO): void {
-		const category = new Category();
+		const specification = new Specification();
+		Object.assign(specification, { name, description });
 
-		Object.assign(category, { name, description });
-
-		this.specifications.push(category);
+		this.specifications.push(specification);
 	}
 
-	findAll(): Category[] {
+	findAll(): Specification[] {
 		return this.specifications;
 	}
 
-	findByName(name: string): Category {
-		const categoriesAlreadyExists = this.specifications.find((c) => c.name === name);
-		return categoriesAlreadyExists;
+	findByName(name: string): Specification {
+		const specificationAlreadyExists = this.specifications.find((c) => c.name === name);
+		return specificationAlreadyExists;
 	}
 }
 
