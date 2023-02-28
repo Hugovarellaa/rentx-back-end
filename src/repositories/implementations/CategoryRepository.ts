@@ -11,7 +11,6 @@ class CategoryRepository implements ICategoryRepository {
 
 	create({ name, description }: ICreateCategoriesDTO): void {
 		const category = new Category();
-
 		Object.assign(category, { name, description });
 
 		this.categories.push(category);
