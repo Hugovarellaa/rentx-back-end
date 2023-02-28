@@ -1,10 +1,10 @@
-import { ICreateCategoriesDTO } from '../dtos/CreateCategoriesDTO';
-import { Category } from '../entities/Category';
+import { ICreateSpecificationsDTO } from '../dtos/CreateSpecificationsDTO';
+import { Specification } from '../entities/Specification';
 
 interface ISpecificationRepository {
-	create({ name, description }: ICreateCategoriesDTO): void;
-	findAll(): Category[];
-	findByName(name: string): Category;
+	create({ name, description }: ICreateSpecificationsDTO): void;
+	findAll(): Specification[];
+	findByName(name: string): Specification;
 }
 
 export { ISpecificationRepository };
