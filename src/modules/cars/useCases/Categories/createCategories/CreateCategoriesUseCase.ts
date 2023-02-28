@@ -7,7 +7,7 @@ interface IRequest {
 
 class CreateCategoriesUseCase {
 	constructor(private categoryRepository: CategoryRepository) {}
-	execute({ name, description }: IRequest) {
+	execute({ name, description }: IRequest): void {
 		const categoriesAlreadyExists = this.categoryRepository.findByName(name);
 
 		if (categoriesAlreadyExists) {

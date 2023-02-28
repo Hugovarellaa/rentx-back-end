@@ -4,7 +4,7 @@ import { CreateCategoriesUseCase } from './CreateCategoriesUseCase';
 
 class CreateCategoriesController {
 	constructor(private createCategoriesUseCase: CreateCategoriesUseCase) {}
-	handle(request: Request, response: Response) {
+	handle(request: Request, response: Response): Response {
 		const { name, description } = request.body;
 
 		this.createCategoriesUseCase.execute({ name, description });

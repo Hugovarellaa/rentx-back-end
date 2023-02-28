@@ -7,7 +7,7 @@ interface IRequest {
 
 class CreateSpecificationsUseCase {
 	constructor(private specificationRepository: SpecificationRepository) {}
-	execute({ name, description }: IRequest) {
+	execute({ name, description }: IRequest): void {
 		const specificationsAlreadyExists = this.specificationRepository.findByName(name);
 		if (specificationsAlreadyExists) {
 			throw new Error(`Category ${name} already exists`);
