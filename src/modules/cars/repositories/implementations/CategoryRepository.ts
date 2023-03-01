@@ -7,7 +7,7 @@ import { ICategoryRepository } from '../ICategoryRepository';
 class CategoryRepository implements ICategoryRepository {
 	private repository: Repository<Category>;
 
-	private constructor() {
+	constructor() {
 		this.repository = getRepository(Category);
 	}
 
