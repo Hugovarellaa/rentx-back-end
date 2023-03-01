@@ -1,5 +1,8 @@
 import { Router } from 'express';
+import 'reflect-metadata';
 import swaggerUi from 'swagger-ui-express';
+import '../database';
+import '../shared/container';
 
 import { categoriesRoutes } from './categories.routes';
 import { specificationsRoutes } from './specifications.routes';
