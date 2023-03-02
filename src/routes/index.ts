@@ -2,6 +2,7 @@ import { Router } from 'express';
 import 'reflect-metadata';
 import swaggerUi from 'swagger-ui-express';
 
+import 'express-async-errors';
 import '../database';
 import '../shared/container';
 import { authenticateRoutes } from './authenticate.routes';
