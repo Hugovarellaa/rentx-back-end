@@ -70,48 +70,48 @@ A aplicação pode ser acessada em [`localhost:8080`](http://localhost:8080).
 
 **RN**
 
-- [] - O usuário não precisar estar logado no sistema.
+- [x] - O usuário não precisar estar logado no sistema.
 
 ### Cadastro de Especificação no carro
 
 **RF**
 
-- [] - Deve ser possível cadastrar uma especificação para um carro
+- [x] - Deve ser possível cadastrar uma especificação para um carro
 
 **RN**
 
-- [] - Não deve ser possível cadastrar uma especificação para um - carro não cadastrado.
-- [] - Não deve ser possível cadastrar uma especificação já - existente para o mesmo carro.
-- [] - O usuário responsável pelo cadastro deve ser um usuário - administrador.
+- [x] - Não deve ser possível cadastrar uma especificação para um - carro não cadastrado.
+- [x] - Não deve ser possível cadastrar uma especificação já - existente para o mesmo carro.
+- [x] - O usuário responsável pelo cadastro deve ser um usuário - administrador.
 
 ### Cadastro de imagens do carro
 
 **RF**
 
-- [] - Deve ser possível cadastrar a imagem do carro
+- [x] - Deve ser possível cadastrar a imagem do carro
 
 **RNF**
 
-- [] - Utilizar o multer para upload dos arquivos
+- [x] - Utilizar o multer para upload dos arquivos
 
 **RN**
 
-- [] - O usuário deve poder cadastrar mais de uma imagem para o - mesmo carro
-- [] - O usuário responsável pelo cadastro deve ser um usuário - administrador.
+- [x] - O usuário deve poder cadastrar mais de uma imagem para o - mesmo carro
+- [x] - O usuário responsável pelo cadastro deve ser um usuário - administrador.
 
 ### Aluguel de carro
 
 **RF**
 
-- [] - Deve ser possível cadastrar um aluguel
+- [x] - Deve ser possível cadastrar um aluguel
 
 **RN**
 
-- [] - O aluguel deve ter duração mínima de 24 horas.
-- [] - Não deve ser possível cadastrar um novo aluguel caso já - exista um aberto para o mesmo usuário
-- [] - Não deve ser possível cadastrar um novo aluguel caso já - exista um aberto para o mesmo carro
-- [] - O usuário deve estar logado na aplicação
-- [] - Ao realizar um aluguel, o status do carro deverá ser - alterado para indisponível
+- [x] - O aluguel deve ter duração mínima de 24 horas.
+- [x] - Não deve ser possível cadastrar um novo aluguel caso já - exista um aberto para o mesmo usuário
+- [x] - Não deve ser possível cadastrar um novo aluguel caso já - exista um aberto para o mesmo carro
+- [x] - O usuário deve estar logado na aplicação
+- [x] - Ao realizar um aluguel, o status do carro deverá ser - alterado para indisponível
 
 ### Devolução de carro
 
