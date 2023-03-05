@@ -2,8 +2,17 @@ import { Router } from 'express';
 
 const categoriesRoutes = Router();
 
-categoriesRoutes.get('/', (request, response) => {
-	return response.json({ message: 'OK' });
+const categories = [];
+
+categoriesRoutes.post('/', (request, response) => {
+	const { name, description } = request.body;
+	const category = {
+		name,
+		description,
+	};
+
+	categories.push(category);
+	return response.status(201).json(category);
 });
 
 export { categoriesRoutes };
