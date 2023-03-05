@@ -13,3 +13,5 @@ class Category {
 		}
 	}
 }
+
+export { Category };
