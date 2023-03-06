@@ -137,13 +137,13 @@ A aplicação pode ser acessada em [`localhost:8080`](http://localhost:8080).
 
 **RN**
 
-- [] - O usuário deve estar logado na aplicação
+- [x] - O usuário deve estar logado na aplicação
 
 ### Recuperar Senha
 
 **RF**
 
-- [] - Deve ser possível o usuário recuperar a senha informando o e-mail
+- [x] - Deve ser possível o usuário recuperar a senha informando o e-mail
 - [] - O usuário deve receber um e-mail com o passo a passo para a recuperação da senha
 - [] - O usuário deve conseguir inserir uma nova senha
 
