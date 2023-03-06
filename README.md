@@ -144,10 +144,10 @@ A aplicação pode ser acessada em [`localhost:8080`](http://localhost:8080).
 **RF**
 
 - [x] - Deve ser possível o usuário recuperar a senha informando o e-mail
-- [] - O usuário deve receber um e-mail com o passo a passo para a recuperação da senha
-- [] - O usuário deve conseguir inserir uma nova senha
+- [x] - O usuário deve receber um e-mail com o passo a passo para a recuperação da senha
+- [x] - O usuário deve conseguir inserir uma nova senha
 
 **RN**
 
-- [] - O usuário precisa informar uma nova senha
-- [] - O link enviado para a recuperação deve expirar em 3 horas
+- [x] - O usuário precisa informar uma nova senha
+- [x] - O link enviado para a recuperação deve expirar em 3 horas
