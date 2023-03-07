@@ -1,0 +1,8 @@
+{
+  "name": "rentx-back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Hugovarellaa/rentx-back-end.git",
+  "author": "Hugo Alves Varella <hugovarellaa@gmail.com>",
+  "license": "MIT"
+}
